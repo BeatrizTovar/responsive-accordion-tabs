@@ -106,13 +106,13 @@
           tabContent[i].style.display = "none";
         }
 
-        let tabLinks = document.getElementsByClassName("tab-links");
+        let tabLinks = document.getElementsByClassName("tab-link");
         for (let i = 0; i < tabLinks.length; i++) {
-          tabLinks[i].className = tabLinks[i].className.replace("active", "");
+          tabLinks[i].className = tabLinks[i].className.replace(" active", "");
         }
 
         document.getElementById(tab_id).style.display = "block";
-        event.currentTarget.className += "active";
+        event.currentTarget.className += " active";
       }
     </script>
   </body>

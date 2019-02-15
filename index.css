@@ -61,7 +61,7 @@
   font-size: 16px;
   color: #000;
 }
-.active:after {
+.accordion.active:after {
   content: "\2212";
 }
 
