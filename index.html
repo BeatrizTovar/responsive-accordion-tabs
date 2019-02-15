@@ -2,52 +2,94 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      .example {
-        padding: 20px;
-        color: white;
-      }
-      /* Extra small devices (phones, 600px and down) */
-      @media only screen and (max-width: 600px) {
-        .example {
-          background: red;
-        }
-      }
-
-      /* Small devices (portrait tablets and large phones, 600px and up) */
-      @media only screen and (min-width: 600px) {
-        .example {
-          background: green;
-        }
-      }
-
-      /* Medium devices (landscape tablets, 768px and up) */
-      @media only screen and (min-width: 768px) {
-        .example {
-          background: blue;
-        }
-      }
-
-      /* Large devices (laptops/desktops, 992px and up) */
-      @media only screen and (min-width: 992px) {
-        .example {
-          background: orange;
-        }
-      }
-
-      /* Extra large devices (large laptops and desktops, 1200px and up) */
-      @media only screen and (min-width: 1200px) {
-        .example {
-          background: pink;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" media="screen" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
   </head>
   <body>
-    <h2>Typical Media Query Breakpoints</h2>
     <p class="example">
       Resize the browser window to see how the background color of this
       paragraph changes on different screen sizes.
     </p>
+
+    <!-- Accordion (Mobile) -->
+
+    <button class="accordion">FIT GUIDE</button>
+    <div class="description">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <button class="accordion">CARE</button>
+    <div class="description">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <button class="accordion">MATERIALS</button>
+    <div class="description">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+
+    <!-- Tabs (Tablet & Desktop) -->
+
+    <div class="tab">
+      <button class="tab-link" onclick="">FIT GUIDE</button>
+      <button class="tab-link" onclick="">CARE</button>
+      <button class="tab-link" onclick="">MATERIALS</button>
+    </div>
+
+    <!-- Content -->
+
+    <div id="fit-guide" class="tab-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <div id="fit-guide" class="tab-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+    <div id="fit-guide" class="tab-content">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+
+    <script>
+      let accordion = document.getElementsByClassName("accordion");
+      for (let i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+
+          let description = this.nextElementSibling;
+          if (description.style.display === "block") {
+            description.style.display = "none";
+          } else {
+            description.style.display = "block";
+          }
+        });
+      }
+    </script>
   </body>
 </html>
