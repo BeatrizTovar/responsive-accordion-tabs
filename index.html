@@ -44,39 +44,47 @@
     <!-- Tabs (Tablet & Desktop) -->
 
     <div class="tab">
-      <button class="tab-link" onclick="">FIT GUIDE</button>
-      <button class="tab-link" onclick="">CARE</button>
-      <button class="tab-link" onclick="">MATERIALS</button>
+      <button class="tab-link" onclick="openTab(event, 'fit-guide')">
+        FIT GUIDE
+      </button>
+      <button class="tab-link" onclick="openTab(event, 'care')">CARE</button>
+      <button class="tab-link" onclick="openTab(event, 'materials')">
+        MATERIALS
+      </button>
     </div>
 
     <!-- Content -->
 
     <div id="fit-guide" class="tab-content">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        commodo consequat. -->
+        1
       </p>
     </div>
-    <div id="fit-guide" class="tab-content">
+    <div id="care" class="tab-content">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        commodo consequat. -->
+        2
       </p>
     </div>
-    <div id="fit-guide" class="tab-content">
+    <div id="materials" class="tab-content">
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        commodo consequat. -->
+        3
       </p>
     </div>
 
     <script>
+      // Accordiong Functionality
       let accordion = document.getElementsByClassName("accordion");
       for (let i = 0; i < accordion.length; i++) {
         accordion[i].addEventListener("click", function() {
@@ -89,6 +97,22 @@
             description.style.display = "block";
           }
         });
+      }
+
+      //   Tab Functionality
+      function openTab(event, tab_id) {
+        let tabContent = document.getElementsByClassName("tab-content");
+        for (let i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+
+        let tabLinks = document.getElementsByClassName("tab-links");
+        for (let i = 0; i < tabLinks.length; i++) {
+          tabLinks[i].className = tabLinks[i].className.replace("active", "");
+        }
+
+        document.getElementById(tab_id).style.display = "block";
+        event.currentTarget.className += "active";
       }
     </script>
   </body>

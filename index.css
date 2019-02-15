@@ -99,7 +99,7 @@
 }
 
 .tab-content {
-  /* display: none; */
+  display: none;
   border: none;
   text-align: center;
 }
