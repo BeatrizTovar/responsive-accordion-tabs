@@ -7,40 +7,63 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .accordion {
+  .accordion-container {
     display: block;
+  }
+  .tab-container {
+    display: none;
   }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-  .example {
-    background: green;
+  .accordion-container {
+    display: block;
+  }
+  .tab-container {
+    display: none;
   }
 }
 
 /* Medium devices (landscape tablets, 767px and up) */
 @media only screen and (min-width: 767px) {
-  .accordion {
+  .accordion-container {
     display: none;
+  }
+  .tab-container {
+    display: block;
   }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  .example {
-    background: orange;
+  .accordion-container {
+    display: none;
+  }
+  .tab-container {
+    display: block;
   }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  .example {
-    background: pink;
+  .accordion-container {
+    display: none;
+  }
+  .tab-container {
+    display: block;
   }
 }
 
 /* Accordion Styling */
+.accordion-container {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  width: 100%;
+  padding-top: 0;
+}
 .accordion {
   background-color: #fff;
   color: #000;
@@ -49,7 +72,7 @@
   width: 100%;
   text-align: left;
   border: none;
-  border-bottom: 1px solid #000;
+  border-top: 1px solid #000;
   outline: none;
   font-family: "Open Sans";
   font-weight: bold;
@@ -70,9 +93,18 @@
   padding: 0 15px;
   display: none;
   overflow: hidden;
+  font-family: "Open Sans";
+  font-size: 12px;
 }
 
 /* Tab Styling */
+.tab-container {
+  margin-top: 30px;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  width: 75%;
+}
 
 .tab {
   text-align: center;
@@ -85,7 +117,9 @@
   border: 1px solid #000;
   outline: none;
   cursor: pointer;
-  padding: 5px 20px;
+  padding: 5px 30px;
+  font-family: "Open Sans";
+  font-weight: bold;
 }
 
 .tab button:hover {
@@ -99,7 +133,10 @@
 }
 
 .tab-content {
+  padding-top: 18px;
   display: none;
   border: none;
   text-align: center;
+  font-family: "Open Sans";
+  font-size: 12px;
 }

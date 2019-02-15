@@ -6,88 +6,95 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
   </head>
   <body>
-    <p class="example">
-      Resize the browser window to see how the background color of this
-      paragraph changes on different screen sizes.
-    </p>
-
     <!-- Accordion (Mobile) -->
-
-    <button class="accordion">FIT GUIDE</button>
-    <div class="description">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
-    </div>
-    <button class="accordion">CARE</button>
-    <div class="description">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
-    </div>
-    <button class="accordion">MATERIALS</button>
-    <div class="description">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+    <div class="accordion-container">
+      <button class="accordion">FIT GUIDE</button>
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <button class="accordion">CARE</button>
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
+      <button class="accordion">MATERIALS</button>
+      <div class="description">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nullam nibh
+          arcu, ultricies nec purus quis, consequat luctus orci. Sed non mi
+          nisi. Donec vulputate erat odio, eget lacinia lectus accumsam sed.
+          Phasellus diam lorem, ullamcorper quis velit a, ultricies facilisis
+          turpis. Sed laoreet efficitur odio, ut consequat arcu iaculis non.
+          Quisque lectus ligula, venenatis quis ullamcorper vitae, eiusmod in
+          nisi. Sed sed arcu tortor. Phasellus a iaculis metus, sed suscipit
+          dui. Nunc mollis, ipsum at tristique dignissim, emim mi sodales nulla,
+          sed dapibus lorem tortor et nisi.
+        </p>
+      </div>
     </div>
 
     <!-- Tabs (Tablet & Desktop) -->
 
-    <div class="tab">
-      <button class="tab-link" onclick="openTab(event, 'fit-guide')">
-        FIT GUIDE
-      </button>
-      <button class="tab-link" onclick="openTab(event, 'care')">CARE</button>
-      <button class="tab-link" onclick="openTab(event, 'materials')">
-        MATERIALS
-      </button>
-    </div>
+    <div class="tab-container">
+      <div class="tab">
+        <button class="tab-link" onclick="openTab(event, 'fit-guide')">
+          FIT GUIDE
+        </button>
+        <button class="tab-link" onclick="openTab(event, 'care')">CARE</button>
+        <button class="tab-link" onclick="openTab(event, 'materials')">
+          MATERIALS
+        </button>
+      </div>
 
-    <!-- Content -->
-
-    <div id="fit-guide" class="tab-content">
-      <p>
-        Integer ver arcu dolor tincidunt dapibus. Nam sit amet lacinia velit.
-        Pellentesque vel urna diam. Nunc sit amet just malesuada, tincidunt
-        massa eu, placerat est. Suspendisse commodo pellentesque gravida. Donec
-        suspicit vulputate odio, at eleifend purus condimentum in. Praesent sed
-        cursus sem. Donec mattis urna efficitur diam agittis, id maximus orci
-        dictum. Etiam non congue felis, et varius augue. Aliquam et ullamcorper
-        massa, Nullam interdum lobortis volutpat. Etiam leo arcu, vulputate vel
-        commodo sit amet, ullamcorper varius dui.
-      </p>
-    </div>
-    <div id="care" class="tab-content">
-      <p>
-        Quisque a turpis fermentum, dapibus mauris quis, dignissim ligula.
-        Aliquam aliquet tellus nunc, non fermentum leo dictum vel. Morbi
-        vehicula laoreet felis ac blandit. Sed mi urna, feugiat nec rhoncus
-        vitae, sollicitudin non dul. Vestibulum in porttitor urna, ut posuere
-        elit. Suspendisse mi magna, mosletie nec allquam id, porttitor in ante.
-        Nullam posuere ipsum odio, at placerat ante eleifend vitae. Suspendisse
-        vestibulum magna pretium velit venenatis venenatis. Donec dapibus, just
-        ut aliquam varius, quam tortor dignissim tellus, imperdiet scelerisque
-        risus ex magna. Nunc sed purus nibh. Phasellus elit erat, scelerisque
-        sed volutpat non, interdum vitae urna.
-      </p>
-    </div>
-    <div id="materials" class="tab-content">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <!-- Content -->
+      <div id="fit-guide" class="tab-content">
+        <p>
+          Integer ver arcu dolor tincidunt dapibus. Nam sit amet lacinia velit.
+          Pellentesque vel urna diam. Nunc sit amet just malesuada, tincidunt
+          massa eu, placerat est. Suspendisse commodo pellentesque gravida.
+          Donec suspicit vulputate odio, at eleifend purus condimentum in.
+          Praesent sed cursus sem. Donec mattis urna efficitur diam agittis, id
+          maximus orci dictum. Etiam non congue felis, et varius augue. Aliquam
+          et ullamcorper massa, Nullam interdum lobortis volutpat. Etiam leo
+          arcu, vulputate vel commodo sit amet, ullamcorper varius dui.
+        </p>
+      </div>
+      <div id="care" class="tab-content">
+        <p>
+          Quisque a turpis fermentum, dapibus mauris quis, dignissim ligula.
+          Aliquam aliquet tellus nunc, non fermentum leo dictum vel. Morbi
+          vehicula laoreet felis ac blandit. Sed mi urna, feugiat nec rhoncus
+          vitae, sollicitudin non dul. Vestibulum in porttitor urna, ut posuere
+          elit. Suspendisse mi magna, mosletie nec allquam id, porttitor in
+          ante. Nullam posuere ipsum odio, at placerat ante eleifend vitae.
+          Suspendisse vestibulum magna pretium velit venenatis venenatis. Donec
+          dapibus, just ut aliquam varius, quam tortor dignissim tellus,
+          imperdiet scelerisque risus ex magna. Nunc sed purus nibh. Phasellus
+          elit erat, scelerisque sed volutpat non, interdum vitae urna.
+        </p>
+      </div>
+      <div id="materials" class="tab-content">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nullam nibh
+          arcu, ultricies nec purus quis, consequat luctus orci. Sed non mi
+          nisi. Donec vulputate erat odio, eget lacinia lectus accumsam sed.
+          Phasellus diam lorem, ullamcorper quis velit a, ultricies facilisis
+          turpis. Sed laoreet efficitur odio, ut consequat arcu iaculis non.
+          Quisque lectus ligula, venenatis quis ullamcorper vitae, eiusmod in
+          nisi. Sed sed arcu tortor. Phasellus a iaculis metus, sed suscipit
+          dui. Nunc mollis, ipsum at tristique dignissim, emim mi sodales nulla,
+          sed dapibus lorem tortor et nisi.
+        </p>
+      </div>
     </div>
 
     <script>
