@@ -95,6 +95,7 @@
   overflow: hidden;
   font-family: "Open Sans";
   font-size: 12px;
+  text-align: center;
 }
 
 /* Tab Styling */
@@ -139,4 +140,37 @@
   text-align: center;
   font-family: "Open Sans";
   font-size: 12px;
+}
+
+.sub-tab-container {
+  display: flex;
+  justify-content: center;
+}
+
+.sub-tab button {
+  width: 100px;
+  font-family: "Open Sans";
+  background-color: inherit;
+  border: none;
+  font-size: 25px;
+}
+
+.active-sub-tab {
+  /* justify-content: center;*/
+  border-bottom: 1px solid #000;
+  padding-bottom: 20px;
+  /* text-decoration: underline;
+  content: "\2212";
+  display: block;
+  color: #000; */
+}
+
+#title4 {
+  font-size: 12px;
+  /* font-weight: 700; */
+  /* margin-top: 5rem; */
+  border-bottom: 5px solid #000;
+  /* display: inline-block; */
+  padding-bottom: 10px;
+  font-family: sans-serif;
 }
