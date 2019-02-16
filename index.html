@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" media="screen" />
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" />
   </head>
+
   <body>
     <!-- Accordion (Mobile) -->
     <div class="accordion-container">
@@ -30,22 +35,31 @@
       <div class="description">
         <div class="sub-tab-container">
           <div class="sub-tab">
-            <button class="tab-link" onclick="openTab(event, 'care')">
+            <button
+              class="sub-tab-link"
+              onclick="openSubTab(event, 'cashmere-mob')"
+            >
               50%
             </button>
-            <div>cashmere</div>
+            <div id="cashmere-mob">cashmere</div>
           </div>
           <div class="sub-tab">
-            <button class="tab-link" onclick="openTab(event, 'care')">
+            <button
+              class="sub-tab-link"
+              onclick="openSubTab(event, 'wool-mob')"
+            >
               46%
             </button>
-            <div id="title4" class="active-sub-tab">wool</div>
+            <div id="wool-mob">wool</div>
           </div>
           <div class="sub-tab">
-            <button class="tab-link" onclick="openTab(event, 'care')">
+            <button
+              class="sub-tab-link"
+              onclick="openSubTab(event, 'modal-mob')"
+            >
               4%
             </button>
-            <div>modal</div>
+            <div id="modal-mob">modal</div>
           </div>
         </div>
         <p>
@@ -105,22 +119,25 @@
       <div id="materials" class="tab-content">
         <div class="sub-tab-container">
           <div class="sub-tab">
-            <button class="tab-link" onclick="openTab(event, 'care')">
+            <button
+              class="sub-tab-link"
+              onclick="openSubTab(event, 'cashmere')"
+            >
               50%
             </button>
-            <div>cashmere</div>
+            <div id="cashmere">cashmere</div>
           </div>
           <div class="sub-tab">
-            <button class="tab-link" onclick="openTab(event, 'care')">
+            <button class="sub-tab-link" onclick="openSubTab(event, 'wool')">
               46%
             </button>
-            <div id="title4" class="active-sub-tab">wool</div>
+            <div id="wool">wool</div>
           </div>
           <div class="sub-tab">
-            <button class="tab-link" onclick="openTab(event, 'care')">
+            <button class="sub-tab-link" onclick="openSubTab(event, 'modal')">
               4%
             </button>
-            <div>modal</div>
+            <div id="modal">modal</div>
           </div>
         </div>
         <p>
@@ -138,17 +155,17 @@
     </div>
 
     <script>
-      // Accordiong Functionality
+      // Accordion Functionality
       let accordion = document.getElementsByClassName("accordion");
       for (let i = 0; i < accordion.length; i++) {
         accordion[i].addEventListener("click", function() {
           this.classList.toggle("active");
 
           let description = this.nextElementSibling;
-          if (description.style.display === "block") {
-            description.style.display = "none";
+          if (description.style.maxHeight) {
+            description.style.maxHeight = null;
           } else {
-            description.style.display = "block";
+            description.style.maxHeight = description.scrollHeight + "px";
           }
         });
       }
@@ -167,6 +184,21 @@
 
         document.getElementById(tab_id).style.display = "block";
         event.currentTarget.className += " active";
+      }
+
+      //   Sub Tab Functionality
+      function openSubTab(event, tab_id) {
+        let x = document.getElementsByClassName("current-sub-tab");
+        for (let i = 0; i < x.length; i++) {
+          x[i].classList.remove("current-sub-tab");
+        }
+        let tabLinks = document.getElementsByClassName("sub-tab-link");
+        for (let i = 0; i < tabLinks.length; i++) {
+          tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+        }
+
+        event.currentTarget.className += " active";
+        document.getElementById(tab_id).className = "current-sub-tab";
       }
     </script>
   </body>
